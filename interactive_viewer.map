@@ -1,0 +1,58 @@
+MAP
+	NAME "Interactive Viewer"
+	STATUS ON
+	IMAGECOLOR 165 191 221
+	IMAGETYPE PNG
+	UNITS DD
+	SIZE 1280 768
+	EXTENT -180 -90 180 90
+	DEBUG 5
+	CONFIG "MS_ERRORFILE" "/tmp/mapserver_wfs_server.log"
+	CONFIG "PROJ_LIB" "/tmp/navhome/lib/share/proj"
+	CONFIG "PROJ_DEBUG" "ON"
+
+	WEB
+		IMAGEPATH "/tmp/ms_tmp/"
+		IMAGEURL "/tmp/"
+		METADATA
+			"wfs_title"          "OpenLayers SWA Interactive Viewer"
+			"wfs_onlineresource" "http://lf.airborne.aero:8164/cgi-bin/mapserv.exe?" 
+			"wfs_srs"            "EPSG:4326 EPSG:900913 EPSG:3857"
+			"wfs_abstract"       "Displaying Southwest Airlines locations via OpenLayers"
+			"wfs_enable_request" "*"
+		END
+	END
+
+	PROJECTION
+		#"proj=latlong"
+		#"ellps=WGS84"
+		#"datum=WGS84"
+		 "proj=merc"
+	END
+
+	LAYER
+		NAME Airports 
+		DEBUG 5
+		METADATA
+			"wfs_srs" "EPSG:3857"
+			"wfs_title" "Airports"
+			"gml_featureid" "Name"
+			"gml_include_items" "all"
+			"wfs_enable_request" "*"
+			"wfs_encoding" "UTF-8"
+			"wfs_extent" "-180 -90 180 90"
+		END
+		TYPE point
+		STATUS ON 
+		LABELITEM 'name'
+		CONNECTIONTYPE OGR
+		CONNECTION '/tmp/navhome/navdata/Southwest_Cities.sqlite'
+		DATA 'select "POINT(" || long || " " || lat || ")" as WKT_GEOMETRY, * FROM southwest_cities'
+		PROJECTION
+			"proj=latlong"
+			"ellps=WGS84"
+			"datum=WGS84"
+		END # PROJECTION
+	END # LAYER
+END #mapfile
+

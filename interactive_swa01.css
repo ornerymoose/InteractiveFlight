@@ -1,0 +1,247 @@
+#map 
+{
+	width: 932px;
+	height: 449px;
+	border: 1px solid black;
+	background: black;
+}
+
+.olAlphaImg
+{
+        opacity:0.90;
+        filter: alpha(opacity = 45);
+}
+
+.olControlZoom
+{
+	left: 800px !important;
+	top: 220px !important;
+	width: 94px !important;
+        height: 192px !important;
+}
+
+.olControlPanPanel 
+{
+ 	background-image:url('images/pan_background.png') !important;
+        background-repeat: no-repeat;
+        background-position: center  !important;
+	left: 737px !important;
+	top: 0px !important;
+	width: 191px !important;
+	height: 195px !important;
+}
+
+.olControlPanPanel .olControlPanNorthItemInactive 
+{
+	background-image:url('images/pan_up_touch_default.png') !important;
+	background-repeat: no-repeat; 
+       	background-position:center  !important;
+	width: 59px !important;
+	height: 47px !important;
+        left: 66px !important;
+        top: 5px !important;
+	position: absolute !important;
+}
+
+.olControlPanPanel .olControlPanSouthItemInactive 
+{
+        background-image:url('images/pan_down_touch_default.png') !important;
+        background-repeat: no-repeat;
+	background-position:center  !important; 
+        width: 59px !important;
+        height: 47px !important;
+	left: 66px !important;
+        top: 143px !important;
+	position: absolute !important;
+}
+
+.olControlPanPanel .olControlPanWestItemInactive 
+{
+        background-image:url('images/pan_right_touch_default.png') !important;
+        background-repeat: no-repeat;
+        background-position:center  !important;
+        width: 46px !important;
+        height: 60px !important;
+        left: 140px !important;
+        top: 72px !important;
+	position: absolute !important;
+}
+
+.olControlPanPanel .olControlPanEastItemInactive 
+{
+        background-image:url('images/pan_left_touch_default.png') !important;
+        background-repeat: no-repeat;
+        background-position:center  !important;
+        width: 46px !important;
+        height: 60px !important;
+        left: 5px !important;
+        top: 72px !important;
+	position: absolute !important;
+}
+
+
+.olControlZoom .olControlZoomIn
+{
+        background-image:url('images/zoom_in_touch_default.png') !important;
+        background-repeat: no-repeat;
+        background-position:center  !important;
+	width: 94 !important;
+	height: 96 !important;
+}
+
+.olControlZoomOut
+{
+	background-image:url('images/zoom_out_touch_default.png') !important;
+        background-repeat: no-repeat;
+        background-position:center  !important;
+        width: 94 !important;
+        height: 96 !important;
+}
+
+.olButton
+{
+        font-weight:500;
+}
+.labelSpan
+{
+        font-family: "Open Sans","Helvetica Neue","Helvetica","Arial,sans-serif";
+        color: black;
+}
+.olControlLayerSwitcher br
+{
+        display:none;
+}
+.baseLbl
+{
+        display:none;
+}
+.dataLbl
+{
+        display:none;
+}
+.Panel1
+{
+        left: 10px;
+        top: 10px;
+}
+
+.firstItemInactive
+{
+        background-image:url('images/aircraft-sw.png');
+        background-repeat:no-repeat;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        cursor: hand;
+}
+.checkmark
+{
+        background-image:url('images/tick.ico');
+        background-repeat:no-repeat;
+        width: 80px;
+        height: 80px;
+        top: 10px;
+        left: 80px;
+        z-index: 800;
+        position: absolute;
+}
+
+
+.center-aircraft-button
+{
+        z-index: 800;
+        position: absolute;
+        top: 80px;
+        left: 14px;
+        background:#25A6E1;
+        background:-moz-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+        background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#25A6E1),color-stop(100%,#188BC0));
+        background:-webkit-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+        background:-o-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+        background:-ms-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+        background:linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#25A6E1',endColorstr='#188BC0',GradientType=0);
+        padding:4px 6px;
+        color:#fff;
+        font-family:'Helvetica Neue',sans-serif;
+        font-size:12px;
+        border-radius:4px;
+        -moz-border-radius:4px;
+        -webkit-border-radius:4px;
+        border:1px solid #1A87B9;
+}
+
+iframe {
+	height: 480px;
+	width: 950px;
+	position: absolute;
+	top: 80px;
+	left: 80px;
+}
+
+#topbar
+{
+	background-image:url('images/SWA_header01.png') !important;
+        background-position: center  !important;
+
+        background-color: lavender;
+        position:absolute;
+        left: 0px;
+        top: 0px;
+        width: 1104px;
+        height: 85px;
+  	border: 1px solid black;
+}
+
+#bottombar
+{
+	background-image:url('images/IAB-728x90.png') !important;
+        background-repeat: no-repeat;
+        background-position: center  !important;
+
+	background-color: black;
+	position:absolute;
+	left: 0px;
+	top: 540px;
+	width: 1020px;
+	height: 85px;
+	border: 1px solid black;
+}
+
+#leftbar
+{
+        background-color: black;
+        position:absolute;
+        left: 0px;
+        top: 87px;
+        width: 85px;
+        height: 451px;
+	border: 1px solid black;
+}
+
+#rightbar
+{
+	background-image:url('images/IAB-160x600.png') !important;
+        background-repeat: no-repeat;
+        background-position: center  !important;
+
+	background-color: black;
+	position:absolute;
+	left: 1023px;
+	top: 0px;
+	width: 160px;
+        height: 625px;
+	border: 1px solid black;
+}
+
+#broadcast_border
+{
+	width: 20px;
+	height: 20px;
+	border: 1px solid black;
+
+}
+
